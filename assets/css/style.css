@@ -1,0 +1,115 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* border: 1px solid #333; */
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(45deg, rgb(65 88 208) 0%, rgb(200 80 192) 50%, rgb(255, 204, 112) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    display: flex;
+    width: 1200px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.wrapper .image {
+    width: 22%;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 200px;
+    margin: 15px 0px;
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: 0.5s;
+}
+
+.image:hover img {
+    transform: scale(1.2);
+}
+
+.gallery {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0.8);
+    transition: 0.5s;
+}
+
+.gallery .close_btn {
+    position: fixed;
+    top: 12px;
+    right: 20px;
+    font-size: 30px;
+}
+
+.gallery .close_btn:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.gallery .control {
+    font-size: 35px;
+    color: rgba(255,255,255,0.8);
+}
+
+.gallery .prev {
+    position: fixed;
+    left: 20px;
+}
+
+.gallery .prev:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.gallery .next {
+    position: fixed;
+    right: 20px;
+}
+
+.gallery .next:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.gallery__inner {
+    width: 80%;
+    height: 80%;
+    margin: auto auto;
+}
+
+.gallery__inner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.appear {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+}
+
+.hide {
+    display: none;
+}
